@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --color-base: #0A0A0A;
+  --color-secondary: #1C1917;
+  --color-accent: #B45309;
+  --color-accent-alt: #D97706;
+}
+
+body {
+  background: var(--color-base);
+  color: white;
+  font-family: system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.animate-scale-in {
+  animation: fadeInScale 0.6s ease-out both;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  @apply px-6 py-3 rounded-xl transition;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-alt);
+}
+
+.card {
+  background: var(--color-secondary);
+  @apply p-6 rounded-2xl transition;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
